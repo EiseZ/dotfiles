@@ -1,0 +1,18 @@
+00:00:00.184767 VirtualBox GUI VM Selector Window 6.1.18 r142142 linux.amd64 (Feb 16 2021 07:45:49) release log
+00:00:00.184767 Log opened 2021-04-18T14:13:02.451459000Z
+00:00:00.184768 Build Type: release
+00:00:00.184768 OS Product: Linux
+00:00:00.184769 OS Release: 5.11.15-arch1-2
+00:00:00.184769 OS Version: #1 SMP PREEMPT Sat, 17 Apr 2021 00:22:30 +0000
+00:00:00.184777 DMI Product Name: MS-7C91
+00:00:00.184780 DMI Product Version: 2.0
+00:00:00.184782 Firmware type: UEFI
+00:00:00.184846 Secure Boot: Disabled
+00:00:00.184858 Host RAM: 15990MB (15.6GB) total, 14024MB (13.6GB) available
+00:00:00.184859 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.184859 Process ID: 30240
+00:00:00.184859 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.184868 Qt version: 5.15.2
+00:00:00.189397 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.189406 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:00.383437 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 1061x23 x 853x515
