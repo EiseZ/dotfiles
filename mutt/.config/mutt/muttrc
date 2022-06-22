@@ -1,0 +1,11 @@
+# Personal account
+set editor = nvim
+set read_inc=50
+bind pager k previous-line
+bind pager j next-line
+
+source colors.muttrc
+source /usr/local/share/mutt-wizard/mutt-wizard.muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/eisezimmerman/.config/mutt/accounts/eise.zimmerman@outlook.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to eise.zimmerman@outlook.com"
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/eisezimmerman/.config/mutt/accounts/109041@hml.nl.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to 109041@hml.nl"
+macro index,pager i3 '<sync-mailbox><enter-command>source /home/eisezimmerman/.config/mutt/accounts/eiscomania@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to eiscomania@gmail.com"

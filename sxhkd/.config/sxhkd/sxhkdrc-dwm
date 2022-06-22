@@ -1,0 +1,62 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	st
+
+# program launcher
+super + @space
+	dmenu_run
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x "sxhkd -c $HOME/.config/sxhkd/sxhkdrc-dwm"
+
+#
+#
+# Custom
+#
+#
+
+#
+# Multimedia
+#
+
+XF86AudioMute
+    $HOME/scripts/audio.sh toggle
+
+XF86AudioRaiseVolume
+    $HOME/scripts/audio.sh set-volume +5%
+
+XF86AudioLowerVolume
+    $HOME/scripts/audio.sh set-volume -5%
+
+ctrl + {XF86AudioMute,XF86AudioRaiseVolume,XF86AudioLowerVolume}
+    if [[ $(pactl get-default-sink) == "alsa_output.usb-Logitech_PRO_X_000000000000-00.analog-stereo" ]]; then pactl set-default-sink alsa_output.pci-0000_2b_00.1.hdmi-stereo; else pactl set-default-sink alsa_output.usb-Logitech_PRO_X_000000000000-00.analog-stereo; fi
+
+#
+# Misc
+#
+
+# firefox google search
+super + q
+	sh /home/eisezimmerman/scripts/rofi/web-search.sh
+
+# Screenshot
+super + shift + s
+	flameshot gui &
+
+# Toggle compositor
+super + shift + c
+    if [[ $(pgrep picom) ]]; then killall picom; else picom -b; fi
+
+# Powermenu
+control + alt + Delete
+    $HOME/scripts/powermenu.sh
+
+
+
+control + alt + shift + q
+    killall dwm
