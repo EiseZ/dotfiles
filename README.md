@@ -10,10 +10,10 @@ clone the git repo
 git clone https://github.com/EiseZ/dotfiles.git
 ```
 
-install stow (example for voidlinux)
+install stow (example for gentoo)
 
 ```sh
-sudo xbps-install stow
+sudo emerge -av stow
 ```
 
 make stow do it's thing
@@ -26,10 +26,10 @@ stow */
 
 There is also a list of the packages I have installed (manualy)
 
-to install them (on voidlinux)
+to install them (on gentoo)
 
 ```sh
-sudo xbps-install -S $(cat packages.txt)
+sudo emerge -av $(cat world)
 ```
 
 ## Extra Files
