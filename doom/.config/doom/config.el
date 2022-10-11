@@ -64,9 +64,6 @@
 (setq reftex-default-bibliography "~/documents/latex/ref.bib")
 
 (require 'bm)
-(global-set-key (kbd "SPC t B b") 'bm-toggle)
-(global-set-key (kbd "SPC t B n")   'bm-next)
-(global-set-key (kbd "SPC t B N") 'bm-previous)
 (map! :leader
       :desc "Toggle line bookmark"
       "t B b" #'bm-toggle)
@@ -76,6 +73,8 @@
 (map! :leader
       :desc "Previous line bookmark"
       "t B N" #'bm-previous)
+
+(setq default-tab-width 4)
 
 (use-package which-key
   :init

@@ -17,7 +17,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # eval "$(starship init zsh)"
 PS1="%F{blue}%2~ %(?.->.%F{red}~>)%f "
 
-export EDITOR="nvim"
+export EDITOR="hx"
 export PATH="$PATH:$HOME/.local/bin:$HOME/.dotnet:$HOME/downloads/apps/steamcmd:/opt/metasploit-framework:/usr/local/texlive/2021/bin/x86_64-linux"
 
 ### Alias' ###
@@ -32,6 +32,20 @@ alias mkdir="mkdir -p"
 alias v="nvim"
 alias se="sudoedit"
 alias rss="newsboat -u .config/newsboat/urls"
+ginit() {
+  dirname=$(pwd | rev | cut -d "/" -f 1 | rev)
+  git init
+  ssh git@git-server "mkdir /home/git/git-repos/$dirname && git init --bare /home/git/git-repos/$dirname"
+  git remote add origin git@git-server:/home/git/git-repos/$dirname
+  git remote set-url --add --push origin git@git-server:/home/git/git-repos/$dirname
+}
+gserve() {
+  dirname=$(pwd | rev | cut -d "/" -f 1 | rev)
+  ssh git@git-server "mkdir /home/git/git-repos/$dirname && git init --bare /home/git/git-repos/$dirname"
+  git remote add origin git@git-server:/home/git/git-repos/$dirname
+  git remote set-url --add --push origin git@git-server:/home/git/git-repos/$dirname
+  git push -u origin main
+}
 
 ### Syntax Highlighting ###
 source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

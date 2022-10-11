@@ -1,0 +1,44 @@
+theme = "tokyonight"
+
+[editor]
+line-number = "relative"
+true-color = true
+scrolloff = 5
+#completion-trigger-len = 3
+rulers = [120]
+color-modes = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-type"]  
+center = ["file-name"]
+right = ["diagnostics", "position-percentage", "position", "mode"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+max-depth = 10
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "."
+tab = ">"
+nsbp = "_"
+newline = "⏎"
+
+[editor.indent-guides]
+render = true
