@@ -1,4 +1,4 @@
 #!/bin/sh
-mkdir -p "$1/.config"
-mv "$HOME/.config/$1" "$1/.config/"
-stow $1
+mkdir -p "$HOME/.dotfiles/$1/.config"
+mv "$HOME/.config/$1" "$HOME/.dotfiles/$1/.config/"
+stow --dir=$HOME/.dotfiles $1

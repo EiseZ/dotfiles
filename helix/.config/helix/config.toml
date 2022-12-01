@@ -5,6 +5,7 @@ line-number = "relative"
 true-color = true
 scrolloff = 5
 #completion-trigger-len = 3
+idle-timeout = 0
 rulers = [120]
 color-modes = true
 
@@ -27,7 +28,6 @@ max-depth = 10
 '[' = ']'
 '"' = '"'
 '`' = '`'
-'<' = '>'
 
 [editor.whitespace.render]
 space = "all"

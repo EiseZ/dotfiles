@@ -1,0 +1,26 @@
+exit
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/main/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+doas sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+exit
+doas sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ls .oh-my-zsh
+cd
+ls .oh-my-zsh
+exit
+cd
+v .config/zsh/.zshrc
+ls .config/zsh
+ls .config/zsh -l
+ls .config/zsh -la
+ls .config/zsh/ -la
+ls
+cat ystem
+ls
+ls
+cat .oh-my-zsh
+cd .oh-my-zsh
+ls
+cp oh-my-zsh.sh ~/.config/zsh/.zshrc
+exit

@@ -194,7 +194,7 @@ file-types = ["cc", "hh", "cpp", "hpp", "h", "ipp", "tpp", "cxx", "hxx", "ixx", 
 roots = []
 comment-token = "//"
 language-server = { command = "clangd" }
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
 
 [language.debugger]
 name = "lldb-vscode"
@@ -338,7 +338,7 @@ roots = []
 comment-token = "//"
 # TODO: highlights-params
 language-server = { command = "typescript-language-server", args = ["--stdio"], language-id = "javascript" }
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 4, unit = "    " }
 
 [language.debugger]
 name = "node-debug2"

@@ -35,7 +35,6 @@ export GPG_AGENT_INFO
 
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc-dwm &
 xwallpaper --no-randr --zoom $HOME/wallpapers/nord_1080p_2mon.png &
-pulseaudio --start &
 dwmblocks &
 
-exec dbus-launch --exit-with-session dwm
+exec dwm

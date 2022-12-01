@@ -1,4 +1,4 @@
 #!/bin/sh
-mkdir -p "$1"
-mv "$HOME/$1" "$1/"
-stow $1
+mkdir -p "$HOME/.dotfiles/$1"
+mv "$HOME/$1" "$HOME/.dotfiles/$1/"
+stow --dir=$HOME/.dotfiles $1

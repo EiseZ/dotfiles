@@ -1,12 +1,8 @@
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/zsh/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt autocd extendedglob
 . /home/eisezimmerman/.config/zsh/.zsh_completion
-# End of lines configured by zsh-newuser-install
-
-/home/eisezimmerman/scripts/try-startx.sh
 
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
@@ -15,23 +11,21 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # eval "$(starship init zsh)"
-PS1="%F{blue}%2~ %(?.->.%F{red}~>)%f "
+PS1="%F{blue}%2~ %(?.>.%F{red}~>)%f "
 
-export EDITOR="hx"
-export PATH="$PATH:$HOME/.local/bin:$HOME/.dotnet:$HOME/downloads/apps/steamcmd:/opt/metasploit-framework:/usr/local/texlive/2021/bin/x86_64-linux"
+export EDITOR="nvim"
 
 ### Alias' ###
 alias ls="ls --color"
 alias la="ls --color -A"
-alias ll="ls --color -l"
+alias ll="ls --color -al"
 alias lt="tree -L"
-alias todo="todo.sh"
 alias rm="rm -ir"
 alias mv="mv -i"
 alias mkdir="mkdir -p"
 alias v="nvim"
 alias se="sudoedit"
-alias rss="newsboat -u .config/newsboat/urls"
+
 ginit() {
   dirname=$(pwd | rev | cut -d "/" -f 1 | rev)
   git init
@@ -47,11 +41,9 @@ gserve() {
   git push -u origin main
 }
 
-### Syntax Highlighting ###
-source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+### Plugins ###
+source $HOME/.config/zsh/plugins/doas.plugin.zsh
+source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/eisezimmerman/downloads/apps/google-cloud-sdk/path.zsh.inc' ]; then . '/home/eisezimmerman/downloads/apps/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/eisezimmerman/downloads/apps/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/eisezimmerman/downloads/apps/google-cloud-sdk/completion.zsh.inc'; fi
+bindkey "^[\t" autosuggest-accept
