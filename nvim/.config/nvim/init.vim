@@ -9,6 +9,8 @@ call plug#begin()
     Plug 'EdenEast/nightfox.nvim'
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
     Plug 'lervag/vimtex'
+    Plug 'sirver/ultisnips'
+    Plug 'da-h/AirLatex.vim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 
@@ -18,14 +20,25 @@ let g:lightline = { "colorscheme": "nightfox" }
 " telescope.nvim
 lua require("telescope").load_extension "file_browser"
 lua require("telescope").load_extension "fzf"
-lua require("telescope").setup { defaults = { file_ignore_patterns = { ".git/", ".cache/", "target/" }}}
+lua require("telescope").setup { defaults = { file_ignore_patterns = { ".git/", ".cache/", "target/", ".fls", ".aux", ".fdb_latexmk", ".toc", ".synctex.gz", ".pdf", ".log", ".dvi" }}}
 
 " vimtex
-syntax enable
 let g:vimtex_view_method = 'zathura'
 
+" ultisnips
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsSnippetDirectories=["snips"]
+
+" AirLatex.vim
+let g:AirLatexUsername="cookies:overleaf_session2=s%3An0NAbtdgcarMe6wQhoSNUbmJjSwa6bQH.ZOcWsHDNRvDNlZeQHp1%2BML3WvmnTKunRpQI7VTuCnOs"
+let g:AirLatexLogLevel="DEBUG"
+let g:AirLatexAllowInsecure=0
+
 " Indentation
-set tabstop=4 softtabstop=4
+set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
@@ -82,11 +95,19 @@ map <M-2> :lua require("harpoon.ui").nav_file(2)<cr>
 map <M-3> :lua require("harpoon.ui").nav_file(3)<cr>
 map <M-4> :lua require("harpoon.ui").nav_file(4)<cr>
 map <M-5> :lua require("harpoon.ui").nav_file(5)<cr>
+" Move to (<>)
+nnoremap <leader><Space> :call search("(<>)")<cr>4xi
+syntax match Comment "(<>)"
+hi customInsertField guifg=grey ctermfg=grey
 
 " Autocmd
 augroup AUTOCMD
     autocmd!
     autocmd InsertEnter * norm zz
     autocmd BufWritePre * :%s/\s\+$//e
-augroup END4
 
+    autocmd BufWinEnter * match customInsertField /(<>)/
+    autocmd InsertEnter * match customInsertField /(<>)/
+    autocmd InsertLeave * match customInsertField /(<>)/
+    autocmd BufWinLeave * call clearmatches()
+augroup END

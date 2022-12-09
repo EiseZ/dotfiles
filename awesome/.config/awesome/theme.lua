@@ -4,7 +4,6 @@
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
-local rnotification = require("ruled.notification")
 local dpi = xresources.apply_dpi
 
 local gfs = require("gears.filesystem")
@@ -12,24 +11,23 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "SF Mono 8"
+theme.font          = "JetBrains Mono Medium 10"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
+theme.bg_normal     = "#2E3440"
+theme.bg_focus      = "#5E81AC"
+theme.bg_urgent     = "#2E3440"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = "#D8DEE9"
+theme.fg_focus      = "#D8DEE9"
+theme.fg_urgent     = "#D8DEE9"
+theme.fg_minimize   = "#D8DEE9"
 
 theme.useless_gap         = dpi(0)
 theme.border_width        = dpi(1)
-theme.border_color_normal = "#000000"
-theme.border_color_active = "#535d6c"
-theme.border_color_marked = "#91231c"
+theme.border_focus = "#5E81AC"
+theme.border_normal = "#2E3440"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -97,7 +95,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = themes_path.."default/background.png"
+theme.wallpaper = themes_path.."/home/eisezimmerman/media/pictures/wallpapers/nord_1080p.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
@@ -126,12 +124,6 @@ theme.awesome_icon = theme_assets.awesome_icon(
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
 theme.icon_theme = nil
 
--- Set different colors for urgent notifications.
-rnotification.connect_signal('request::rules', function()
-    rnotification.append_rule {
-        rule       = { urgency = 'critical' },
-        properties = { bg = '#ff0000', fg = '#ffffff' }
-    }
-end)
-
 return theme
+
+-- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80

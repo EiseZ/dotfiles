@@ -25,6 +25,12 @@
       "rootPatterns": [
         "Cargo.toml"
       ]
+    },
+    "python": {
+      "command": "pylsp",
+      "filetypes": [
+        "python"
+      ]
     }
   }
 }

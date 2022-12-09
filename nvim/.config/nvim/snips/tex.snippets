@@ -1,0 +1,88 @@
+snippet btheo "Theorem Box"
+\begin {theorem}{(<>)}{}
+(<>)
+\end {theorem}
+endsnippet
+
+snippet bcoro "Corollary Box"
+\begin {corollary}{(<>)}{}
+(<>)
+\end {corollary}
+endsnippet
+
+snippet blenm "Lenma Box"
+\begin {lenma}{(<>)}{}
+(<>)
+\end {lenma}
+endsnippet
+
+snippet bprop "Proposition Box"
+\begin {prop}{(<>)}{}
+(<>)
+\end {prop}
+endsnippet
+
+snippet bclai "Claim Box"
+\begin {claim}{(<>)}{}
+(<>)
+\end {claim}
+endsnippet
+
+snippet bexer "Exercise Box"
+\begin {exercise}{(<>)}{}
+(<>)
+\end {exercise}
+endsnippet
+
+snippet bexam "Example Box"
+\begin {example}{(<>)}{}
+(<>)
+\end {examble}
+endsnippet
+
+snippet bdefi "Definition Box"
+\begin {definition}{(<>)}{}
+(<>)
+\end {definition}
+endsnippet
+
+snippet bques "Question Box"
+\begin {question}{(<>)}{}
+(<>)
+\end {question}
+endsnippet
+
+snippet bsolu "Solution Box"
+\begin {solution}{(<>)}{}
+(<>)
+\end {solution}
+endsnippet
+
+snippet bnote "Note Box"
+\begin {note}{}{}
+(<>)
+\end {note}
+endsnippet
+
+snippet template "Default template"
+\documentclass[12pt,a4paper]{report}
+
+\input{macros.tex}
+\input{boxes.tex}
+
+\title{(<>)}
+\author{Eise Zimmerman}
+
+\begin{document}
+\makeatletter
+\frontpage{\@title}{\@author}{\@date}
+\makeatother
+
+\tableofcontents
+\newpage
+
+\chapter{THis is chaper UNOS}
+\section{YES}
+
+\end{document}
+endsnippet
