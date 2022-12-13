@@ -31,6 +31,7 @@ setxkbmap us colemak_dh
 # Disable mouse acceleration
 xinput --set-prop 10 'libinput Accel Profile Enabled' 0, 1
 xinput --set-prop 11 'libinput Accel Profile Enabled' 0, 1
+picom --experimental-backend &
 
 exec dbus-launch --sh-syntax --exit-with-session awesome
 

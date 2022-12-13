@@ -1,8 +1,8 @@
-HISTFILE=~/.cache/zsh/.histfile
+HISTFILE=$HOME/.cache/zsh/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 setopt autocd extendedglob
-. /home/eisezimmerman/.config/zsh/.zsh_completion
+. $HOME/.config/zsh/.zsh_completion
 
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char

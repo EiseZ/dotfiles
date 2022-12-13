@@ -17,13 +17,13 @@ vim.opt.smartcase = true
 -- Hisory & Backup
 vim.opt.backup = true
 vim.opt.swapfile = false
-vim.opt.backupdir = "~/.cache/nvim/backup"
+vim.opt.backupdir = os.getenv("HOME") .. "/.cache/nvim/backup"
 vim.opt.undofile = true
-vim.opt.undodir = "~/.cache/nvim/undo"
+vim.opt.undodir = os.getenv("HOME") .. "/.cache/nvim/undo"
 
 -- Colors
 vim.opt.termguicolors = true
-vim.cmd("colorscheme nord")
+vim.cmd.colorscheme "catppuccin"
 
 -- Cursor
 vim.opt.cursorline = true
