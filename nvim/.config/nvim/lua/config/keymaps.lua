@@ -14,6 +14,18 @@ map("n", "<Leader>px", ":Telescope projects<CR>", { silent = true })
 map("n", "<Leader>`", ":ToggleTerm<CR>", { silent = true })
 map("n", "<leader>", ":WhichKey '<Space>'<CR>", { silent = true })
 
+-- map("i", "<tab>", function()
+--     local luasnip = require("luasnip")
+--     if luasnip.jumpable(1) then
+--         luasnip.jump(1)
+--     end
+-- end, { silent = true })
+
+map("n", "<leader>/", ":Commentary<CR>", { silent = true })
+map("v", "<leader>/", ":Commentary<CR>", { silent = true })
+
+map("n", "<leader>rs", ":so %<CR>", { silent = true })
+
 map("n", "<Leader>tn", ":tabnext<CR>", { silent = true })
 map("n", "<Leader>tp", ":tabprevious<CR>", { silent = true })
 map("n", "<Leader>tN", ":tabnew<CR>", { silent = true })

@@ -1,0 +1,76 @@
+snippet btheo Theorem Box
+	\\begin {theorem}{${1:title}}{}
+	${2:content}
+	\\end {theorem}
+
+snippet bcoro Corollary Box
+	\\begin {corollary}{${1:title}}{}
+	${0}
+	\\end {corollary}
+
+snippet blenm Lenma Box
+	\\begin {lenma}{${1:title}}{}
+	${0}
+	\\end {lenma}
+
+snippet bprop Proposition Box
+	\\begin {prop}{${1:title}}{}
+	${0}
+	\\end {prop}
+
+snippet bclai Claim Box
+	\\begin {claim}{${1:title}}{}
+	${0}
+	\\end {claim}
+
+snippet bexer Exercise Box
+	\\begin {exercise}{${1:title}}{}
+	${0}
+	\\end {exercise}
+
+snippet bexam Example Box
+	\\begin {example}{${1:title}}{}
+	${0}
+	\\end {examble}
+
+snippet bdefi Definition Box
+	\\begin {definition}{${1:title}}{}
+	${0}
+	\\end {definition}
+
+snippet bques Question Box
+	\\begin {question}{${1:title}}{}
+	${0}
+	\\end {question}
+
+snippet bsolu Solution Box
+	\\begin {solution}{${1:title}}{}
+	${0}
+	\\end {solution}
+
+snippet bnote Note Box
+	\\begin {note}{${1:title}}{}
+	${0}
+	\\end {note}
+
+snippet template Default template
+	\\documentclass[12pt,a4paper]{report}
+
+	\\input{macros.tex}
+	\\input{boxes.tex}
+
+	\\title{(<>)}
+	\\author{Eise Zimmerman}
+
+	\\begin{document}
+	\\makeatletter
+	\\frontpage{\\@title}{\\@author}{\\@date}
+	\\makeatother
+
+	\\tableofcontents
+	\\newpage
+
+	\\chapter{THis is chaper UNOS}
+	\\section{YES}
+
+	\\end{document}

@@ -25,7 +25,7 @@ return require("packer").startup(function(use)
     use { "hrsh7th/cmp-buffer", event = "InsertEnter" }
     use { "hrsh7th/cmp-path", event = "InsertEnter" }
     use { "hrsh7th/cmp-cmdline", event = "InsertEnter" }
-    use { "L3MON4D3/LuaSnip", event = "InsertEnter" }
+    use { "L3MON4D3/LuaSnip", event = "InsertEnter", config = function() require("plugins/luasnip").lazy_load() end }
     use { "saadparwaiz1/cmp_luasnip", event = "InsertEnter" }
     use { "hrsh7th/cmp-nvim-lsp" }
     use { "neovim/nvim-lspconfig", event = "InsertEnter", config = function() require("plugins/nvim-lspconfig") end }
@@ -34,6 +34,7 @@ return require("packer").startup(function(use)
     use "ap/vim-css-color"
     use { "brenoprata10/nvim-highlight-colors" }
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+    use { "tpope/vim-commentary" }
 
     use "bluz71/vim-mistfly-statusline"
 
