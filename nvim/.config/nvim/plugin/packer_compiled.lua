@@ -74,35 +74,92 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["AirLatex.vim"] = {
-    loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/AirLatex.vim",
-    url = "https://github.com/da-h/AirLatex.vim"
+  LuaSnip = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["coc.nvim"] = {
-    loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "https://github.com/neoclide/coc.nvim"
+  ["cmp-buffer"] = {
+    after_files = { "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  fzf = {
-    loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/fzf",
-    url = "https://github.com/junegunn/fzf"
+  ["cmp-cmdline"] = {
+    after_files = { "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/cmp-cmdline/after/plugin/cmp_cmdline.lua" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
   },
-  ["mason.nvim"] = {
+  ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  nvim = {
+  ["cmp-path"] = {
+    after_files = { "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    after_files = { "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/cmp_luasnip/after/plugin/cmp_luasnip.lua" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["impatient.nvim"] = {
+    config = { "\27LJ\2\2)\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\14impatient\frequire\0" },
     loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/nvim",
-    url = "https://github.com/catppuccin/nvim"
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
+  ["leap.nvim"] = {
+    config = { "\27LJ\2\2E\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0+\1\2\0B\0\2\1K\0\1\0\25add_default_mappings\tleap\frequire\0" },
+    loaded = true,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
+  },
+  neovim = {
+    loaded = true,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
+  ["nvim-cmp"] = {
+    config = { "\27LJ\2\0020\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\21plugins/nvim-cmp\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-highlight-colors"] = {
     loaded = true,
     path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/nvim-highlight-colors",
     url = "https://github.com/brenoprata10/nvim-highlight-colors"
+  },
+  ["nvim-lspconfig"] = {
+    config = { "\27LJ\2\0026\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\27plugins/nvim-lspconfig\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -113,6 +170,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["project.nvim"] = {
+    config = { "\27LJ\2\2/\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\20plugins/project\frequire\0" },
+    loaded = true,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
@@ -125,6 +188,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
+    config = { "\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugins/telescope\frequire\0" },
     loaded = true,
     path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
@@ -134,11 +198,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ultisnips = {
-    loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/ultisnips",
-    url = "https://github.com/sirver/ultisnips"
   },
   ["vim-css-color"] = {
     loaded = true,
@@ -150,18 +209,63 @@ _G.packer_plugins = {
     path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/vim-mistfly-statusline",
     url = "https://github.com/bluz71/vim-mistfly-statusline"
   },
-  vimtex = {
+  ["vim-which-key"] = {
     loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/vimtex",
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/vim-which-key",
+    url = "https://github.com/liuchengxu/vim-which-key"
+  },
+  vimtex = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex",
     url = "https://github.com/lervag/vimtex"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: leap.nvim
+time([[Config for leap.nvim]], true)
+try_loadstring("\27LJ\2\2E\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0+\1\2\0B\0\2\1K\0\1\0\25add_default_mappings\tleap\frequire\0", "config", "leap.nvim")
+time([[Config for leap.nvim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+try_loadstring("\27LJ\2\2)\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\14impatient\frequire\0", "config", "impatient.nvim")
+time([[Config for impatient.nvim]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+try_loadstring("\27LJ\2\2/\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\20plugins/project\frequire\0", "config", "project.nvim")
+time([[Config for project.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugins/telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\0028\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-lspconfig', 'nvim-cmp', 'cmp-cmdline', 'cmp-buffer', 'cmp_luasnip', 'cmp-path', 'LuaSnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]], true)
+vim.cmd [[source /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]]
+time([[Sourcing ftdetect script at: /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim]], false)
+time([[Sourcing ftdetect script at: /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tex.vim]], true)
+vim.cmd [[source /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tex.vim]]
+time([[Sourcing ftdetect script at: /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tex.vim]], false)
+time([[Sourcing ftdetect script at: /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], true)
+vim.cmd [[source /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]]
+time([[Sourcing ftdetect script at: /home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

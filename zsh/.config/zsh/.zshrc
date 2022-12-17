@@ -47,3 +47,5 @@ source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.
 source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 bindkey "^[\t" autosuggest-accept
+
+ufetch

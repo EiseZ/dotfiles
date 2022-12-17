@@ -7,9 +7,17 @@ function map(mode, lhs, rhs, opts)
 end
 
 vim.g.mapleader = " "
-map("n", "<Leader>f", ":Telescope find_files<CR>", { silent = true })
-map("n", "<Leader>F", ":Telescope file_browser<CR>", { silent = true })
+map("n", "<Leader>ps", ":Telescope find_files<CR>", { silent = true })
+map("n", "<Leader>pb", ":Telescope file_browser<CR>", { silent = true })
+map("n", "<Leader>pg", ":Telescope live_grep<CR>", { silent = true })
+map("n", "<Leader>px", ":Telescope projects<CR>", { silent = true })
 map("n", "<Leader>`", ":ToggleTerm<CR>", { silent = true })
+map("n", "<leader>", ":WhichKey '<Space>'<CR>", { silent = true })
+
+map("n", "<Leader>tn", ":tabnext<CR>", { silent = true })
+map("n", "<Leader>tp", ":tabprevious<CR>", { silent = true })
+map("n", "<Leader>tN", ":tabnew<CR>", { silent = true })
+map("n", "<Leader>tc", ":tabclose<CR>", { silent = true })
 
 map("t", "<C-h>", "<C-\\><C-n>:wincmd h<CR>", { silent = true })
 map("t", "<C-j>", "<C-\\><C-n>:wincmd j<CR>", { silent = true })

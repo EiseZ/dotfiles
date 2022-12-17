@@ -23,7 +23,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.cache/nvim/undo"
 
 -- Colors
 vim.opt.termguicolors = true
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "rose-pine"
 
 -- Cursor
 vim.opt.cursorline = true
