@@ -40,57 +40,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
-
-(setq beacon-mode 1)
-
-(after! persp-mode
-  (setq persp-emacsclient-init-frame-behaviour-override "main"))
-
-(menu-bar--display-line-numbers-mode-relative)
-
-(require 'tex)
-(add-to-list 'TeX-view-program-selection
-        '(output-pdf "Zathura"))
-
-(setq-default TeX-master nil)
-(defun compile-latex()
-  (if (string-match "\\(.tex$\\)" buffer-file-name)
-      (TeX-command-run-all mark-ring)
-      ()
-  ))
-(add-hook 'evil-insert-state-exit-hook 'compile-latex)
-
-(setq reftex-default-bibliography "~/documents/latex/ref.bib")
-
-(require 'bm)
-(map! :leader
-      :desc "Toggle line bookmark"
-      "t B b" #'bm-toggle)
-(map! :leader
-      :desc "Next line bookmark"
-      "t B n" #'bm-next)
-(map! :leader
-      :desc "Previous line bookmark"
-      "t B N" #'bm-previous)
-
-(setq default-tab-width 4)
-
-(use-package which-key
-  :init
-  (setq which-key-side-window-location 'bottom
-        which-key-sort-order #'which-key-key-order-alpha
-        which-key-sort-uppercase-first nil
-        which-key-add-column-padding 1
-        which-key-max-display-columns nil
-        which-key-min-display-lines 6
-        which-key-side-window-slot -10
-        which-key-side-window-max-height 0.25
-        which-key-idle-delay 0.8
-        which-key-max-description-length 25
-        which-key-allow-imprecise-window-fit t
-        which-key-separator " → " ))
-(which-key-mode)
+(setq org-directory "~/documents/org/")
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -123,3 +73,7 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+(setq dap-auto-configure-mode t)
+(require 'dap-cpptools)

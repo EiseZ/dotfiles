@@ -1,0 +1,14 @@
+game:
+  appid: '1245620'
+game_slug: elden-ring
+name: ELDEN RING
+requires: null
+script:
+  game:
+    appid: 1245620
+service: steam
+service_id: 1245620
+slug: elden-ring-proton
+variables: {}
+version: Proton
+year: 2022

@@ -1,7 +1,7 @@
 local telescope = require("telescope")
 telescope.setup {
     defaults = {
-        file_ignore_patterns = { ".git/", ".cache/", "target/", ".fls", ".aux", ".fdb_latexmk", ".toc", ".synctex.gz", ".pdf", ".log", ".dvi" }
+        file_ignore_patterns = { ".git/", ".cache/", "target/", "dist/", ".iso", ".bin", ".fls", ".aux", ".fdb_latexmk", ".toc", ".synctex.gz", ".pdf", ".log", ".dvi" }
     },
     extensions = {
         file_browser = {

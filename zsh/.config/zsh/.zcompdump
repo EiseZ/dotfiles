@@ -1,4 +1,4 @@
-#files: 774	version: 5.9
+#files: 779	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -198,6 +198,7 @@ _comps=(
 'builtin' '_builtin'
 'bunzip2' '_bzip2'
 'burst' '_mh'
+'bwrap' '_bwrap'
 'bzcat' '_bzip2'
 'bzegrep' '_grep'
 'bzfgrep' '_grep'
@@ -390,6 +391,7 @@ _comps=(
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
+'fd' '_fd'
 'feh' '_feh'
 'fetchmail' '_fetchmail'
 'ffmpeg' '_ffmpeg'
@@ -645,6 +647,7 @@ _comps=(
 'hostname' '_hostname'
 'hotjava' '_webbrowser'
 'htop' '_htop'
+'hugo' '_hugo'
 'iceweasel' '_mozilla'
 'icombine' '_ispell'
 'iconv' '_iconv'
@@ -935,6 +938,7 @@ _comps=(
 'paplay' '_pulseaudio'
 'parec' '_pulseaudio'
 'parecord' '_pulseaudio'
+'pass' '_pass'
 'passwd' '_users'
 'paste' '_paste'
 'pasuspender' '_pulseaudio'
@@ -1402,7 +1406,14 @@ _comps=(
 'xbps-uchroot' '_xbps'
 'xbps-uhelper' '_xbps'
 'xbps-uunshare' '_xbps'
+'xbuildbarf' '_xtools'
+'xbulk' '_xtools'
+'xbump' '_xtools'
+'xcheckrestart' '_xtools'
 'xclip' '_xclip'
+'xdbg' '_xtools'
+'xdiff' '_xtools'
+'xdowngrade' '_xtools'
 'xdpyinfo' '_x_utils'
 'xdvi' '_xdvi'
 'xelatex' '_tex'
@@ -1412,11 +1423,19 @@ _comps=(
 'xfig' '_xfig'
 'xfontsel' '_x_utils'
 'xfreerdp' '_rdesktop'
+'xgensum' '_xtools'
+'xgrep' '_xtools'
 'xhost' '_x_utils'
+'xi' '_xtools'
+'xilog' '_xtools'
 'xinput' '_xinput'
 'xkill' '_x_utils'
+'xlg' '_xtools'
 'xli' '_xloadimage'
 'xloadimage' '_xloadimage'
+'xlocate' '_xtools'
+'xlog' '_xtools'
+'xls' '_xtools'
 'xlsatoms' '_x_utils'
 'xlsclients' '_x_utils'
 'xml' '_xmlstarlet'
@@ -1425,18 +1444,28 @@ _comps=(
 'xmms2' '_xmms2'
 'xmodmap' '_xmodmap'
 'xmosaic' '_webbrowser'
+'xmypkgs' '_xtools'
 'xon' '_x_utils'
+'xoptdiff' '_xtools'
 'xournal' '_xournal'
 'xpdf' '_xpdf'
 'xping' '_hosts'
+'xpkg' '_xtools'
+'xpkgdiff' '_xtools'
 'xprop' '_x_utils'
+'xq' '_xtools'
 'xrandr' '_xrandr'
 'xrdb' '_x_utils'
+'xrecent' '_xtools'
+'xrevbump' '_xtools'
+'xrevshlib' '_xtools'
 'xscreensaver-command' '_xscreensaver'
 'xset' '_xset'
 'xsetbg' '_xloadimage'
 'xsetroot' '_x_utils'
 'xsltproc' '_xmlsoft'
+'xsrc' '_xtools'
+'xsubpkg' '_xtools'
 'xterm' '_xterm'
 'xtightvncviewer' '_vnc'
 'xtp' '_imagemagick'
@@ -1625,8 +1654,9 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _curl _libinput _mpv _pulseaudio _rg \
-            _sv _xbps _xbps_src _yt-dlp _zathura \
+autoload -Uz _bwrap _curl _fd _hugo _libinput \
+            _mpv _pass _pulseaudio _rg _sv \
+            _xbps _xbps_src _xtools _yt-dlp _zathura \
             _cdr _all_labels _all_matches _alternative _approximate \
             _arg_compile _arguments _bash_completions _cache_invalid _call_function \
             _combination _comp_locale _complete _complete_debug _complete_help \

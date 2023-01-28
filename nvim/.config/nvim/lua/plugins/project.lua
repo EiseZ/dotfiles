@@ -7,7 +7,7 @@ project.setup({
     silent_chdir = false,
     datapath = vim.fn.stdpath("data"),
     patterns = { "!=lua",
-                 ">latex", ">rust", ">web", ">python", ">haskell", ">c", ">cpp", ">julia",
+                 ">latex", ">rust", ">web", ">python", ">haskell", ">c", ">cpp", ">julia", ">other",
                  ">forks", ">.config",
                  "=pws-code",
                },

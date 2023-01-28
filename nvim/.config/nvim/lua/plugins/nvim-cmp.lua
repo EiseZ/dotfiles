@@ -58,12 +58,22 @@ cmp.setup({
           end
         end, { "i", "s" }),
     }),
+    experimental = {
+        ghost_text = true,
+    },
     sources = {
       { name = "luasnip" },
       { name = "nvim_lsp" },
-      { name = "buffer" },
+      { name = "buffer", keyword_length = 4 },
       { name = "path" },
     },
+})
+
+cmp.setup.filetype("tex", {
+    sources = {
+      { name = "luasnip" },
+      { name = "nvim_lsp" },
+    }
 })
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).

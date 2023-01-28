@@ -74,8 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    config = { "\27LJ\2\2/\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\20plugins/comment\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
-    config = { "\27LJ\2\2O\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14lazy_load\"luasnip.loaders.from_snipmate\frequire\0" },
+    config = { "\27LJ\2\2/\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\20plugins/luasnip\frequire\0" },
     loaded = false,
     needs_bufread = true,
     only_cond = false,
@@ -127,9 +135,17 @@ _G.packer_plugins = {
   },
   ["leap.nvim"] = {
     config = { "\27LJ\2\2E\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0+\1\2\0B\0\2\1K\0\1\0\25add_default_mappings\tleap\frequire\0" },
-    loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/opt/leap.nvim",
     url = "https://github.com/ggandor/leap.nvim"
+  },
+  ["mason.nvim"] = {
+    config = { "\27LJ\2\0023\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0" },
+    loaded = true,
+    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   neovim = {
     loaded = true,
@@ -200,11 +216,6 @@ _G.packer_plugins = {
     path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/vim-commentary",
-    url = "https://github.com/tpope/vim-commentary"
-  },
   ["vim-css-color"] = {
     loaded = true,
     path = "/home/eisezimmerman/.local/share/nvim/site/pack/packer/start/vim-css-color",
@@ -221,6 +232,7 @@ _G.packer_plugins = {
     url = "https://github.com/liuchengxu/vim-which-key"
   },
   vimtex = {
+    config = { "\27LJ\2\2.\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\19plugins/vimtex\frequire\0" },
     loaded = false,
     needs_bufread = true,
     only_cond = false,
@@ -230,10 +242,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: leap.nvim
-time([[Config for leap.nvim]], true)
-try_loadstring("\27LJ\2\2E\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0+\1\2\0B\0\2\1K\0\1\0\25add_default_mappings\tleap\frequire\0", "config", "leap.nvim")
-time([[Config for leap.nvim]], false)
+-- Config for: mason.nvim
+time([[Config for mason.nvim]], true)
+try_loadstring("\27LJ\2\0023\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
+time([[Config for mason.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugins/telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
 -- Config for: impatient.nvim
 time([[Config for impatient.nvim]], true)
 try_loadstring("\27LJ\2\2)\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\14impatient\frequire\0", "config", "impatient.nvim")
@@ -242,10 +258,6 @@ time([[Config for impatient.nvim]], false)
 time([[Config for project.nvim]], true)
 try_loadstring("\27LJ\2\2/\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\20plugins/project\frequire\0", "config", "project.nvim")
 time([[Config for project.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugins/telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\0028\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
@@ -258,7 +270,7 @@ vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-lspconfig', 'nvim-cmp', 'cmp-cmdline', 'cmp-buffer', 'cmp_luasnip', 'cmp-path', 'LuaSnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-lspconfig', 'nvim-cmp', 'cmp-cmdline', 'leap.nvim', 'cmp-buffer', 'cmp_luasnip', 'LuaSnip', 'cmp-path', 'Comment.nvim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

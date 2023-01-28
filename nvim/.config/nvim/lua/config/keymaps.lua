@@ -7,6 +7,7 @@ function map(mode, lhs, rhs, opts)
 end
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 map("n", "<Leader>ps", ":Telescope find_files<CR>", { silent = true })
 map("n", "<Leader>pb", ":Telescope file_browser<CR>", { silent = true })
 map("n", "<Leader>pg", ":Telescope live_grep<CR>", { silent = true })
@@ -20,9 +21,6 @@ map("n", "<leader>", ":WhichKey '<Space>'<CR>", { silent = true })
 --         luasnip.jump(1)
 --     end
 -- end, { silent = true })
-
-map("n", "<leader>/", ":Commentary<CR>", { silent = true })
-map("v", "<leader>/", ":Commentary<CR>", { silent = true })
 
 map("n", "<leader>rs", ":so %<CR>", { silent = true })
 

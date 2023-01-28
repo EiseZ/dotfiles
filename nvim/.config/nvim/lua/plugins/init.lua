@@ -25,16 +25,17 @@ return require("packer").startup(function(use)
     use { "hrsh7th/cmp-buffer", event = "InsertEnter" }
     use { "hrsh7th/cmp-path", event = "InsertEnter" }
     use { "hrsh7th/cmp-cmdline", event = "InsertEnter" }
-    use { "L3MON4D3/LuaSnip", event = "InsertEnter", config = function() require("plugins/luasnip").lazy_load() end }
+    use { "L3MON4D3/LuaSnip", event = "InsertEnter", config = function() require("plugins/luasnip")  end }
     use { "saadparwaiz1/cmp_luasnip", event = "InsertEnter" }
     use { "hrsh7th/cmp-nvim-lsp" }
     use { "neovim/nvim-lspconfig", event = "InsertEnter", config = function() require("plugins/nvim-lspconfig") end }
     use { "hrsh7th/nvim-cmp", event = "InsertEnter", config = function() require("plugins/nvim-cmp") end }
+    use { "williamboman/mason.nvim", config = function() require("mason").setup() end }
 
     use "ap/vim-css-color"
     use { "brenoprata10/nvim-highlight-colors" }
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-    use { "tpope/vim-commentary" }
+    use { "numToStr/Comment.nvim", event = "InsertEnter", config = function() require("plugins/comment") end }
 
     use "bluz71/vim-mistfly-statusline"
 
@@ -43,11 +44,11 @@ return require("packer").startup(function(use)
     end }
     use { "liuchengxu/vim-which-key", command = { "WhichKey", "WhichKey!" } }
 
-    use { "ggandor/leap.nvim", config = function() require("leap").add_default_mappings(true) end }
+    use { "ggandor/leap.nvim", event = "InsertEnter", config = function() require("leap").add_default_mappings(true) end }
 
     use { "lewis6991/impatient.nvim", config = function() require("impatient") end }
 
-    use { "lervag/vimtex", ft = "tex" }
+    use { "lervag/vimtex", ft = "tex", config = function() require("plugins/vimtex") end }
 
     if packer_bootstrap then
         require("packer").sync()
